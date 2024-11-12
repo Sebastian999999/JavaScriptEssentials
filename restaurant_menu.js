@@ -12,6 +12,16 @@ document.getElementById('maincourseMenuItems').innerHTML = mainCourseItem;
 
 let desertMenuItem = '';
 dessertMenu.forEach((item , index) => {
-    desertMenuItem += `<p>Item ${index + 1} : ${item}</p>`
+    desertMenuItem += `<p>Item ${index + 1} : ${item}</p>`;
 });
 document.getElementById('dessertMenuItems').innerHTML = desertMenuItem;
+
+
+
+
+const breakfastMenu2 = ['Pancakes- $12', 'Eggs Benedict -$22.99', 'Oatmeal -$21.99', 'Frittata -$15'];
+let breakfastMenu2Item = '';
+breakfastMenu2.forEach((item,index)=>{
+    breakfastMenu2Item += `<p>Item ${index + 1}: ${item}</p>`;
+});
+document.getElementById('breakfastMenuItems2').innerHTML = breakfastMenu2Item;

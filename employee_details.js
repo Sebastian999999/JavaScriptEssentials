@@ -1,7 +1,7 @@
 const employees = [
-      { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 },
-      { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 },
-      { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 },
+      { id: 1, name: 'John Doe', age: 30, department: 'IT', salary: 50000 , specialization: 'Javascript'},
+      { id: 2, name: 'Alice Smith', age: 28, department: 'HR', salary: 45000 , specialization: 'Python'},
+      { id: 3, name: 'Bob Johnson', age: 35, department: 'Finance', salary: 60000 , specialization: 'Java' },
       //... More employee records can be added here
     ];
 
@@ -27,4 +27,12 @@ const employees = [
             document.getElementById('employeesDetails').innerHTML = `<p>${employeeID.id} ${employeeID.name} ${employeeID.age} ${employeeID.department} ${employeeID.salary}</p>`;
         else
             document.getElementById('employeesDetails').innerHTML = '<p>Employee not found.</p>';
+    }
+
+    function findEmployeeBySpecialization(special){
+        const findEmployee = employees.find(emp => emp.specialization === special);
+        if (findEmployee)
+            document.getElementById('employeesDetails').innerHTML = `<p>${findEmployee.id} ${findEmployee.name} ${findEmployee.department} ${findEmployee.salary} ${findEmployee.specialization}</p>`;
+        else
+        document.getElementById('employeesDetails').innerHTML = '<p>Employee not found.</p>';
     }
